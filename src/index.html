@@ -3,11 +3,533 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Eco cosmetics</title>
+    <link rel="icon" href="./images/favicon.svg">
     <link rel="stylesheet" href="./styles/main.scss">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
+  <body class="page">
+    <header class="page__header header">
+      <div class="header__logo logo">
+        <a href="#" class="icon icon--logo"></a>
+        <p class="logo__text">witch of mountain winds</p>
+      </div>
+
+      <div class="header__menu">
+        <label class="icon icon--menu" for="open"></label>
+        <input
+          type="radio"
+          name="menu"
+          class="toggle toggle--header"
+          id="open"
+        >
+        <label class="page__menu menu">
+          <input
+            type="radio"
+            name="menu"
+            class="toggle toggle--aside"
+          >
+          <div class="icon icon--close"></div>
+          <nav class="menu__nav">
+            <a href="#shop" class="menu__link">Shop</a>
+            <a href="#contact" class="menu__link">Contact</a>
+            <a href="#about" class="menu__link">About</a>
+          </nav>
+        </label>
+      </div>
+
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#shop" class="nav__link">Shop</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="#shop" class="icon icon--bag">
+        <div class="counter counter--small counter--big">12</div>
+      </a>
+    </header>
+
+    <div class="page__products products animation-wrapper" id="products">
+      <div class="products__select select">
+        <button class="select__button button">
+          all products
+          <div class="select__angle"></div>
+        </button>
+        <div class="select__wrapper">
+          <div class="select__list">
+            <label class="select__label">
+              all products
+              <input
+                type="radio"
+                name="select"
+                value="all products"
+                class="toggle"
+                checked
+              >
+            </label>
+            <label class="select__label">
+              face
+              <input
+                type="radio"
+                name="select"
+                value="face"
+                class="toggle"
+              >
+            </label>
+            <label class="select__label">
+              body
+              <input
+                type="radio"
+                name="select"
+                value="body"
+                class="toggle"
+              >
+            </label>
+            <label class="select__label">
+              hair
+              <input
+                type="radio"
+                name="select"
+                value="hair"
+                class="toggle"
+              >
+            </label>
+            <label class="select__label">
+              candles
+              <input
+                type="radio"
+                name="select"
+                value="candles"
+                class="toggle"
+              >
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="products__container"></div>
+    </div>
+
+    <div class="page__product animation-wrapper" id="product">
+      <section class="product animation-left">
+        <div class="product__decoration decoration--product">
+          <div class="decoration__line"></div>
+          <p class="decoration__text">about the product</p>
+        </div>
+
+        <div class="product__content product__content--top">
+          <h2 class="product__title">Anti-stress face mask</h2>
+          <p class="product__price">220 UAH</p>
+          <p class="product__volume">100 ML</p>
+        </div>
+
+        <div class="product__image">
+          <div class="img-bg--1-1"></div>
+        </div>
+
+        <div class="product__content product__content--bottom">
+          <button
+            class="product__button button add"
+            data-product-id="1"
+          ></button>
+          <div class="product__text-container">
+            <p class="product__text product__text--ingredients">
+              aloe powder, damask rose powder, kaolin, micronized rice powder, lotus seed powder, betaine, niacinamide, allantoin.
+            </p>
+            <p class="product__text product__text--application">
+              1 tsp displace the powder with warm water, apply on the face, leave for 5 minutes and rinse. Do not allow the mask to dry, if necessary, moisten with water. Use 1-3 times a week.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <main class="page__main main">
+      <section class="main__section animation-wrapper">
+        <div class="brand animation-left">
+          <div class="brand__content">
+            <h1 class="brand__title">
+              Brand of eco-cosmetics and magic candles
+            </h1>
+            <p class="brand__text">
+              20% of sales at a wild bird shelter
+            </p>
+            <a href="#shop" class="brand__button button">shop</a>
+          </div>
+          <div class="brand__image-container">
+            <div class="brand__image"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="main__section-container">
+        <section class="main__section animation-wrapper">
+          <div class="choose animation-right">
+            <div class="choose__line choose__line--top"></div>
+            <h2 class="choose__title">
+              if you choose the gifts of nature and care about it&prime;s - scroll down
+            </h2>
+            <p class="choose__text">
+              Biologists say that birds are indicators of the environmental situation, and over the past half century, the population of seabirds has declined by 70%. Birds die due to environmental problems and human intervention in the natural environment.
+            </p>
+            <div class="choose__line choose__line--bottom"></div>
+          </div>
+        </section>
+      </div>
+
+      <div class="main__section-container" id="about">
+        <section class="about animation-wrapper">
+          <div class="about__decoration decoration decoration--about">
+            <div class="decoration__line"></div>
+            <p class="decoration__text">witch of mountain winds</p>
+          </div>
+          <div class="about__wrapper">
+            <article class="about__article">
+              <h2 class="about__title title">about our brand</h2>
+              <div class="about__content animation-top">
+                <p class="about__text">
+                  Our brand cosmetics are made from natural ingredients and we are promoting them to the masses. Shampoo, hair conditioner, soap - in recycled paper. Creams, oils, washing products in glass containers with recycled paper labels. No synthetics and microplastics in cosmetics. And the packaging from it can be returned for recycling or reused.
+                </p>
+                <p class="about__text">
+                  We are all neighbors of one big House. And we must protect what we have. Destroying everything around for the sake of consumerism and imaginary convenience, we destroy what does not belong to us. Be aware of your choice!
+                </p>
+                <a href="#" class="about__link link">learn more</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="about__image-container about__image-container--1">
+            <picture>
+              <source
+                media="(min-width: 1280px)"
+                srcset="./images/about/about-desktop-1.png"
+                class="image"
+              >
+              <img
+                src="./images/about/about-tablet.png"
+                alt="Product foto"
+                class="image"
+              >
+            </picture>
+          </div>
+          <div class="about__image-container about__image-container--2">
+            <img
+              src="./images/about/about-desktop-2.png"
+              alt="Product foto"
+              class="image"
+            >
+          </div>
+        </section>
+      </div>
+
+      <div class="main__section-container" id="shop">
+        <section class="shop animation-wrapper">
+          <div class="shop__decoration decoration decoration--shop">
+            <div class="decoration__line"></div>
+            <p class="decoration__text">shop</p>
+          </div>
+
+          <h3 class="shop__title title">shop</h3>
+
+          <nav class="shop__nav nav-shop">
+            <ul class="nav-shop__list">
+              <li class="nav-shop__item">
+                <input
+                  type="radio"
+                  name="shop"
+                  id="face"
+                  class="nav-shop__radio"
+                  checked
+                >
+                <label for="face" class="nav-shop__link">face</label>
+              </li>
+              <li class="nav-shop__item">
+                <input
+                  type="radio"
+                  name="shop"
+                  id="body"
+                  class="nav-shop__radio"
+                >
+                <label for="body" class="nav-shop__link">body</label>
+              </li>
+              <li class="nav-shop__item">
+                <input
+                  type="radio"
+                  name="shop"
+                  id="hair"
+                  class="nav-shop__radio"
+                >
+                <label for="hair" class="nav-shop__link">hair</label>
+              </li>
+              <li class="nav-shop__item">
+                <input
+                  type="radio"
+                  name="shop"
+                  id="candles"
+                  class="nav-shop__radio"
+                >
+                <label for="candles" class="nav-shop__link">candles</label>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="shop__product-container animation-right">
+            <div class="shop__product shop__product--1 shop-product">
+              <a href="#product" class="shop-product__link">
+                <div class="shop-product__image shop-product__image--1 shop-product__image--face-1"></div>
+              </a>
+              <h3 class="shop-product__title">anti-stress face mask</h3>
+              <p class="shop-product__price">220 UAH</p>
+            </div>
+
+            <div class="shop__product shop__product--2 shop-product">
+              <a href="#product" class="shop-product__link">
+                <div class="shop-product__image shop-product__image--2 shop-product__image--face-2"></div>
+              </a>
+              <h3 class="shop-product__title">mineral powder</h3>
+              <p class="shop-product__price">300 UAH</p>
+            </div>
+          </div>
+
+          <a href="#products" class="shop__button button">all products</a>
+        </section>
+      </div>
+
+      <div class="main__section-container main__section-container--padding-bottom">
+        <section class="creators animation-wrapper">
+          <div class="creators__decoration decoration decoration--creators">
+            <div class="decoration__line"></div>
+            <p class="decoration__text">about the creators</p>
+          </div>
+
+          <article class="creators__container">
+            <h2 class="creators__title title">about the creators</h2>
+            <div class="creators__wrapper animation-top">
+              <div class="creators__content">
+                <p class="creators__text">
+                  My name is Victoria, I&prime;m a master at candle making and natural cosmetics. In the past, a cynologist, was engaged in herbs, made layouts on the Tarot.
+                </p>
+                <p class="creators__text">
+                  I am also a volunteer to save wild birds in distress, a consultant to the Phoenix Wildlife Rehabilitation Center, a member of the Society for the Conservation of Birds of Ukraine with the support of Birdlife International.
+                </p>
+                <p class="creators__text">
+                  My husband and I live in the Carpathian region in the city of Chernivtsi. I dream of my center for the rehabilitation of wild birds, as it is very difficult to rescue birds in a rented communal apartment.
+                </p>
+                <a href="#" class="creators__link link">learn more</a>
+              </div>
+              <button class="creators__button button">to contact us</button>
+            </div>
+          </article>
+
+          <div class="creators__image-container">
+            <img
+              src="./images/creators/creators.png"
+              alt="Product foto"
+              class="image"
+            >
+          </div>
+        </section>
+      </div>
+
+      <section class="ingredients animation-wrapper">
+        <div class="ingredients__decoration decoration decoration--ingredients">
+          <div class="decoration__line"></div>
+          <p class="decoration__text">Ingredients</p>
+        </div>
+
+        <h2 class="ingredients__title title">Ayurvedic Tooth Powder</h2>
+
+        <div class="ingredients__container animation-right">
+          <ul class="ingredients__list">
+            <li class="ingredients__item">Kaolin</li>
+            <li class="ingredients__item">Sivak</li>
+            <li class="ingredients__item">Calcium</li>
+            <li class="ingredients__item">Licorice root</li>
+            <li class="ingredients__item">Turmeric</li>
+          </ul>
+          <div class="ingredients__image-container">
+            <picture>
+              <source
+                media="(min-width: 1068px)"
+                srcset="./images/ingredients/ingredients-desktop.svg"
+                class="image"
+              >
+              <source
+                media="(min-width: 640px)"
+                srcset="./images/ingredients/ingredients-tablet.svg"
+                class="image"
+              >
+              <img
+                src="./images/ingredients/ingredients-mobile.svg"
+                alt="Ingredients foto"
+                class="image"
+              >
+            </picture>
+          </div>
+        </div>
+
+        <a href="#" class="ingredients__link link">learn more</a>
+      </section>
+
+      <div class="main__section-container">
+        <section class="icons animation-wrapper">
+          <div class="icons__container animation-left">
+            <div class="icons__content">
+              <div class="icon icon--1"></div>
+              <h4 class="icons__title">no synthetics and microplastics</h4>
+            </div>
+
+            <div class="icons__content">
+              <div class="icon icon--2"></div>
+              <h4 class="icons__title">product packaging can be recycled or reused</h4>
+            </div>
+
+            <div class="icons__content">
+              <div class="icon icon--3"></div>
+              <h4 class="icons__title">only natural ingredients</h4>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="main__section-container" id="contact">
+        <section class="contact">
+          <div class="contact__decoration decoration decoration--help">
+            <div class="decoration__line"></div>
+            <p class="decoration__text">help</p>
+          </div>
+
+          <div class="contact__container animation-wrapper">
+            <h2 class="contact__title title">contact us</h2>
+            <p class="contact__info">
+              We will help you choose a product that suits you and answer your other questions
+            </p>
+            <form
+              action="/"
+              metod="post"
+              class="contact__form form animation-top"
+            >
+              <div class="form__wrapper">
+                <label for="name"></label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form__input"
+                  placeholder="Your Name"
+                  minlength="3"
+                  required
+                >
+                <label for="email"></label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form__input"
+                  placeholder="E-mail"
+                  required
+                >
+                <label for="phone"></label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  class="form__input"
+                  placeholder="Phone Number"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  required
+                >
+                <label for="message"></label>
+                <textarea
+                  type="text"
+                  name="message"
+                  id="message"
+                  class="form__input"
+                  placeholder="Your message"
+                  rows="1"
+                  minlength="3"
+                  maxlength="300"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                value="send a message"
+                class="form__button button"
+              >
+                send a message
+              </button>
+            </form>
+          </div>
+
+          <div class="contact__image-container">
+            <picture>
+              <source
+                media="(min-width: 1280px)"
+                srcset="./images/contact/contact-desktop.png"
+                class="image"
+              >
+              <img
+                src="./images/contact/contact.png"
+                alt="Contact foto"
+                class="image"
+              >
+            </picture>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="page__footer footer">
+      <nav class="footer__nav footer-nav">
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item">
+            <a href="#shop" class="footer-link">Shop</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#contact" class="footer-link">Contact</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#about" class="footer-link">About</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="footer__networks-container">
+        <a href="https://instagram.com" class="icon icon--instagram"></a>
+        <a href="https://facebook.com" class="icon icon--facebook"></a>
+      </div>
+
+      <ul class="footer__contacts contacts-list">
+        <li class="contacts-list__item">Ukraine</li>
+        <li class="contacts-list__item">
+          <a href="mailto:support.mountain@gmail.com" class="footer-link">
+            support.mountain@gmail.com
+          </a>
+        </li>
+        <li class="contacts-list__item">
+          <a href="tel:+380934476839" class="footer-link">
+            +380934476839
+          </a>
+        </li>
+        <li class="contacts-list__item">
+          Support is available Monday - Friday 9am-6pm
+        </li>
+      </ul>
+
+      <p class="footer__copyright">
+        <span class="footer__copyright-before">Copyright</span>&copy;
+        2023 witch of mountain winds
+      </p>
+    </footer>
+
+    <script type="module" src="scripts/main.js"></script>
   </body>
 </html>

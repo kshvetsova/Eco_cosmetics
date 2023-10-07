@@ -1,0 +1,114 @@
+.creators {
+  position: relative;
+  @include pageGrid;
+
+  &__decoration {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+      @include positionDecoration(230px);
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-column: 1 / -1;
+    gap: 10px;
+
+    @include onTablet {
+      grid-column: 1 / 4;
+    }
+
+    @include onDesktop {
+      grid-column: 2 / 6;
+      gap: 34px;
+    }
+
+    @include onDesktopPlus {
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+
+    @include onDesktop {
+      width: 380px;
+    }
+  }
+
+  &__wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    :nth-child(1),
+    :nth-child(2) {
+      margin-bottom: 20px;
+
+      @include onTablet {
+        margin-bottom: 15px;
+      }
+
+      @include onDesktop {
+        margin-bottom: 30px;
+      }
+    }
+
+    :nth-child(3) {
+      display: none;
+
+      @media (min-width: 925px ) {
+        display: block;
+      }
+    }
+
+    @include onTablet {
+      @include font(400, 16px, 24px);
+    }
+  }
+
+  &__link {
+    margin-top: 30px;
+
+    @include onTablet {
+      margin-top: 20px;
+    }
+  }
+
+  &__button {
+    justify-self: end;
+    margin-top: 36px;
+
+    @include onTablet {
+      margin-top: 0;
+    }
+  }
+
+  &__image-container {
+    display: none;
+
+    @include imageContainer (0, 128.6%, 113.6%);
+
+    @include onTablet {
+      display: block;
+      grid-column: 4 / -1;
+    }
+
+    @include onDesktop {
+      grid-column: 7 / -1;
+    }
+
+    @include onDesktopPlus {
+      padding-bottom: 111.2%;
+    }
+  }
+}

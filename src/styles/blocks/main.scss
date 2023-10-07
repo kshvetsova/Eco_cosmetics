@@ -1,0 +1,21 @@
+.main {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: $main-background-color;
+  @include paddingMain;
+  overflow: hidden;
+
+  &__section-container {
+    @include paddingSection(padding-top);
+
+    &--padding-bottom {
+      @include paddingSection(padding-bottom);
+    }
+  }
+}
+
+.main:target {
+  display: flex;
+}
