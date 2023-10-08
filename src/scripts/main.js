@@ -155,7 +155,7 @@ function setCounterBag() {
     : counter.classList.add('counter--visible');
 }
 
-const handleClickButton = ({ target }, button = '') => {
+const handleClickButton = ({ target }, button) => {
   const productId = target.dataset.productId;
 
   if (bag.includes(productId)) {
@@ -175,6 +175,7 @@ const handleClickButton = ({ target }, button = '') => {
   }
 
   setCounterBag();
+  window.localStorage.setItem('bagProductId', JSON.stringify(bag));
 };
 
 buttonProduct.addEventListener('click', (e) => {

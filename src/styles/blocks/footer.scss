@@ -44,8 +44,9 @@
   }
 
   &-link {
-    display: block;
+    display: flex;
     width: fit-content;
+    height: min-content;
     color: $main-background-color;
     pointer-events: all;
     transform-origin: left;
@@ -140,16 +141,16 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  &__item {
 
-  :last-child {
-    width: 280px;
-    margin-bottom: 40px;
-  }
+    &:last-child {
+      width: 280px;
+      margin-bottom: 40px;
 
-  @include onTablet {
-    :last-child {
-      width: fit-content;
-      margin-bottom: 0;
+      @include onTablet {
+        width: fit-content;
+        margin-bottom: 0;
+      }
     }
   }
 
