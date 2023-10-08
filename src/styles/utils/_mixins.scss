@@ -61,6 +61,18 @@
   }
 }
 
+@mixin marginSection {
+  margin-bottom: 464px;
+
+  @include onTablet {
+    margin-bottom: 265px;
+  }
+
+  @include onDesktop {
+    margin-bottom: 330px;
+  }
+}
+
 @mixin paddingHeader {
   padding: 15px $padding-mobile;
 

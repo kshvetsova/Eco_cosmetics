@@ -1,5 +1,5 @@
 .footer {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -75,10 +75,10 @@
 
     @include onDesktop {
       gap: 14px;
-      padding-top: 30px;
       padding-bottom: 0;
       grid-column: 8 / 10;
       order: 9;
+      align-items: center;
     }
   }
 
@@ -150,6 +150,10 @@
       @include onTablet {
         width: fit-content;
         margin-bottom: 0;
+      }
+
+      @include onDesktop {
+        margin-bottom: 27px;
       }
     }
   }

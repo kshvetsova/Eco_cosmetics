@@ -1,4 +1,9 @@
 .page {
+
+  &__main {
+    @include marginSection;
+  }
+
   &__header {
     position: sticky;
     top: 0;
@@ -13,6 +18,7 @@
     display: flex;
     flex-direction: column;
     @include paddingMain;
+    @include marginSection;
     padding-top: 50px;
     background-color: $main-background-color;
     position: relative;
@@ -43,6 +49,7 @@
 
   &__products {
     @include paddingMain;
+    @include marginSection;
     padding-top: 50px;
     background-color: $main-background-color;
     position: relative;
