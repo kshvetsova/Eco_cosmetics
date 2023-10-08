@@ -66,6 +66,7 @@
   &__button {
     grid-column: 1 / -1;
     justify-self: center;
+    color: $text-button-color;
   }
 }
 
@@ -238,9 +239,5 @@
   &__price {
     @include font(500, 18px, 27px);
     letter-spacing: 0.9px;
-  }
-
-  &__button {
-    color: $text-button-color;
   }
 }
