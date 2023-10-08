@@ -223,6 +223,9 @@ select.addEventListener('click', ({ target }) => {
   }
 
   if (target.matches('input')) {
+    if (button.childNodes[0].textContent !== target.value) {
+      window.scroll(0, 0);
+    }
     button.childNodes[0].textContent = target.value;
     list.classList.toggle('select__list--open');
     filterProducts(target.value);

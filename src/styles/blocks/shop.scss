@@ -239,4 +239,8 @@
     @include font(500, 18px, 27px);
     letter-spacing: 0.9px;
   }
+
+  &__button {
+    color: $text-button-color;
+  }
 }
