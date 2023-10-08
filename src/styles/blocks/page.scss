@@ -2,7 +2,7 @@
   &__header {
     position: sticky;
     top: 0;
-    z-index: 3;
+    z-index: 5;
 
     @include onDesktop {
       margin-block: 20px;
@@ -16,7 +16,7 @@
     padding-top: 50px;
     background-color: $main-background-color;
     position: relative;
-    z-index: 2;
+    z-index: 4;
 
     @include onTablet {
       padding-top: 70px;
@@ -29,7 +29,7 @@
 
     &:target {
       position: relative;
-      z-index: 2;
+      z-index: 4;
     }
 
     .page &:target ~ .page__main {
@@ -46,7 +46,7 @@
     padding-top: 50px;
     background-color: $main-background-color;
     position: relative;
-    z-index: 2;
+    z-index: 4;
 
     @include onTablet {
       padding-top: 70px;
@@ -59,7 +59,7 @@
 
     &:target {
       position: relative;
-      z-index: 2;
+      z-index: 4;
     }
 
     .page &:target ~ .page__main {

@@ -213,6 +213,8 @@ function filterProducts(option) {
   });
 }
 
+const selectWrapper = document.querySelector('.select__wrapper');
+
 select.addEventListener('click', ({ target }) => {
   const list = select.children[1].children[0];
   const button = select.children[0];
@@ -220,6 +222,7 @@ select.addEventListener('click', ({ target }) => {
   if (target.matches('button') || target.matches('.select__angle')) {
     list.classList.toggle('select__list--open');
     button.children[0].classList.toggle('select__angle--close');
+    selectWrapper.classList.toggle('shadow');
   }
 
   if (target.matches('input')) {
@@ -230,6 +233,7 @@ select.addEventListener('click', ({ target }) => {
     list.classList.toggle('select__list--open');
     filterProducts(target.value);
     button.children[0].classList.toggle('select__angle--close');
+    selectWrapper.classList.toggle('shadow');
   }
 });
 
