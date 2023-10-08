@@ -19,6 +19,7 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.3s;
+    pointer-events: all;
 
     &::before {
       display: flex;
